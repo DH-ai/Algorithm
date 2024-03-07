@@ -1,0 +1,7 @@
+# Ignore compiled executable files
+*.exe
+*.out
+*.dll
+
+# Ignore Visual Studio Code files
+.vscode/
