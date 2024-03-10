@@ -14,15 +14,34 @@ def add(data,head):
     if head==None:
         head = new_node
         head.next = None
-    else:
+    else:   
         new_node.next=head
         head = new_node
     return head
 
+
+def rem(data,head):
+    current = head
+    while(data!=current.data):
+        prev = current
+        current = current.next
+        
+        if (data==current.data):
+            prev.next=current.next
+            break
+        
+        
+        if (head.next==None):
+            print("Unable to find the element")
+            break
+    
+    
+   
+
 def printList(head):
    
     current = head
-    print(current)
+    
     while (current!=None):
         print(current.data , "->",end=" ")
         
@@ -54,19 +73,19 @@ while (option !=5):
             head = add(data,head)
 
         elif option == 2:
-            print(head)
-            # print("Which no. to remove")
-            # data = int(" ")
+            
+            print("Which no. to remove")
+            data = int(input(""))
+            rem(data,head)
 
             
 
         elif option == 3:
             print("Which no. to insert")
-            print("dsa")
+            
 
         elif option == 4:
             
             printList(head)
-        elif option == 5:
-            print("dsa")
+        
                
