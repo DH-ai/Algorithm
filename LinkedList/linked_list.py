@@ -9,6 +9,7 @@ class Node():
 
 
 
+# added a node
 def add(data,head):
     new_node = Node(data=data)
     if head==None:
@@ -19,7 +20,7 @@ def add(data,head):
         head = new_node
     return head
 
-
+#remove a node 
 def rem(data,head):
     current = head
     while(data!=current.data):
@@ -36,7 +37,25 @@ def rem(data,head):
             break
     
     
-   
+#Insert a element
+def ins(data,pos,head):
+    new_node = Node(data)
+    
+    current = head
+    i =1
+    while (current.next!=None and pos!=0):
+       
+        if (i==pos-1):
+            temp = current.next
+            current.next = new_node
+            new_node.next = temp
+            break
+        else:
+            current = current.next
+
+            i+=1
+        
+
 
 def printList(head):
    
@@ -82,7 +101,9 @@ while (option !=5):
 
         elif option == 3:
             print("Which no. to insert")
-            
+            data = int(input(""))
+            pos= int(input("Position:"))
+            ins(data,pos,head)
 
         elif option == 4:
             
