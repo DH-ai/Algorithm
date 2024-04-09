@@ -74,7 +74,7 @@ void insertNode(int data, int place){
 void printlist(){
     Node *current = head ;
     while (current!=NULL){
-        printf(" %d -> ",current->data);
+        printf("current: %x ,current.next:%x ,current.data: %d\n",current,current->next,current->data);
         current = current->next;
     }
     printf("\n");

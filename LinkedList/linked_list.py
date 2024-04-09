@@ -62,7 +62,7 @@ def printList(head):
     current = head
     
     while (current!=None):
-        print(current.data , "->",end=" ")
+        print("current: " ,current , "current.next: ",current.next, "current.data: ",current.data, end="\n")
         
         current = current.next
    
