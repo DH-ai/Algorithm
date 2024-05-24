@@ -4,7 +4,7 @@
 
 from typing import List
 
-
+set 
 class Solution:
     def minimizeDifference(self, n : int, k : int, arr : List[int]) -> int:
         # code here
