@@ -22,4 +22,6 @@ int orderedPairs(int s, int x){
     int ans  =0;
 
     return ans ;
+    int freq[15];
+    fill(freq,freq+15,0);
 }
